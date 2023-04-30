@@ -1,4 +1,4 @@
-# RetroPixel Games
+# RetroPixel Games 👾
 
 Olá!
 
