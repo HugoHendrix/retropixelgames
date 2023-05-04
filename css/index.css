@@ -1,114 +1,288 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f8f8f8;
-  }
-  
-  .logo img {
-    height: 80px;
-  }
-  
-  ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  li {
-    margin: 0 10px;
-  }
-  
-  li a {
-    display: block;
-    padding: 10px;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.logo img {
+  height: 80px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 0 10px;
+}
+
+li a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff9900;
+}
+
+/* ANIMAÇÃO e BG  */
+
+
+.titulo {
+  text-align: center;
+  padding: 100px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('/images/retro-game-bg.jpg');
+  height: 70vh;
+  animation: moveBackground 88s linear infinite;
+  text-shadow: #333;
+
+}
+
+.titulo h1 {
+  font-size: 5rem;
+  color: #f8f8f8;
+}
+
+.titulo p {
+  color: #f8f8f8;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+
+span {
+  color: #F29D35;
+}
+
+@keyframes moveBackground {
+  from {
+    background-position: 0 0;
   }
 
-  nav a:hover {
-    color: #ff9900;
+  to {
+    background-position: -2000px 0;
   }
-  
-  /* ANIMAÇÃO BG  */
+}
+
+#logo-animation {
+  position: relative;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#logo-animation img {
+  animation: pulse 1s ease-in-out 3;
+}
 
 
-  .titulo {
+
+/* SEÇÃO SOBRE NOS  */
+
+
+
+h2 {
+  text-align: center;
+  margin: 60px;
+  font-size: 5rem;
+  text-shadow: #333;
+  position: relative;
+  display: inline-block;
+
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #F29D35;
+  animation: linha-animacao 30s forwards;
+}
+
+@keyframes linha-animacao {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+
+.sobre-nos {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+.sobre-nos img {
+  margin-right: 20px;
+  max-width: 75%;
+  border-radius: 10%;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+
+}
+
+
+.sobre-nos p {
+  text-align: space-around;
+  text-indent: 25px;
+  font-size: 2.2rem;
+  padding: 3rem;
+}
+
+/* SEÇÃO NOSSO TIME */
+
+.nosso-time {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.membro {
+  margin: 20px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.membro img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+
+}
+
+.nosso-time img:hover {
+  transform: scale(1.1);
+  border: 2px solid #F29D35;
+
+}
+
+.membro h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.membro p {
+  margin-top: 10px;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+
+
+/* REPONSIVE */
+
+@media screen and (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .logo {
     text-align: center;
-    padding: 60px;
-    color: #f8f8f8;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url('/images/retro-game-bg.jpg');
-    height: 45vh;
-    animation: moveBackground 88s linear infinite;
-    font-size: 4rem;
-  
-  }
-  
-  
-  @keyframes moveBackground {
-    from { background-position: 0 0; }
-    to { background-position: -2000px 0; }
   }
 
-  #logo-animation {
-     position: relative;
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  #logo-animation img {
-    animation: pulse 1s ease-in-out 3;
+  ul {
+    margin-top: 20px;
+    justify-content: space-between;
   }
 
-  /* REPONSIVE */
-  
-  @media screen and (max-width: 600px) {
-    nav {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .logo {
-      text-align: center;
-    }
-  
-    ul {
-      margin-top: 20px;
-      justify-content: space-between;
-    }
-  
-    li {
-      margin: 0;
-      flex-basis: 30%;
-      text-align: center;
-    }
-
+  li {
+    margin: 0;
+    flex-basis: 30%;
+    text-align: center;
   }
+
+  .titulo h1,
+  h2 {
+    font-size: 2.8rem;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 700px) {
+  .sobre-nos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sobre-nos img {
+    order: 2;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .sobre-nos p {
+    text-align: space-around;
+    font-size: 2rem;
+    padding: 3rem;
+  }
+}
