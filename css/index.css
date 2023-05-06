@@ -42,10 +42,13 @@ li a {
   color: #333;
   text-decoration: none;
   font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease-in;
 }
 
 nav a:hover {
   color: #ff9900;
+  border-bottom: 1px solid #ff9900;
 }
 
 /* ANIMAÇÃO e BG  */
