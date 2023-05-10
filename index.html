@@ -18,9 +18,9 @@
 </head>
 
 <body>
-  <nav>
+  <nav class="fixed">
     <div id="logo-animation" class="logo">
-      <img src="./images/retropixel_games_logo.png" alt="Logo da RetroPixel Games">
+      <img src="./images/retropixel_games_logo.png" alt="Logo do e-commerce Retropixel Games, controle laranja de PlayStation 1 levemente inclinado para a esquerda">
       <h5 title="Nostalgia a cada clique">RETROPIXEL GAMES</>
     </div>
     <ul>
@@ -37,7 +37,7 @@
   <h2 id="quem-somos" class="animacao-titulo">SOBRE NÓS</h2>
   <div class="sobre-nos">
 
-    <img src="/images/bg-game-boy-about-us.jpg" alt="Imagem da RetroPixel Games">
+    <img src="/images/bg-game-boy-about-us.jpg" alt="Console Gameboy branco ao lado de cartuchos de jogos, incluindo o famoso Tetris, em um fundo preto">
 
 
     <p>Na RetroPixel Games, temos uma paixão por jogos retrô e zumbis.
@@ -50,7 +50,7 @@
   <div class="nosso-time">
 
     <div class="membro">
-      <img src="/images/rafael-santos-dev.jpg" alt="dev do time">
+      <img src="/images/rafael-santos-dev.jpg" alt="Rafael Dev do time. Imagem de um homem sorridente, de óculos, com um físico mais robusto, vestindo uma camisa polo verde.">
       <h3>Rafael Santos</h3>
       <p>Rafael é o nosso desenvolvedor. Ele é responsável por manter nosso site funcionando sem problemas e garantir
         que nossos clientes possam navegar e comprar nossos produtos de forma fácil e segura.
@@ -59,7 +59,7 @@
     </div>
 
     <div class="membro">
-      <img src="/images/ana-silva-marketing.jpg" alt="ana-silva-marketing">
+      <img src="/images/ana-silva-marketing.jpg" alt="Ana Silva do Marketing. Imagem de uma mulher branca com cabelos ruivos e maquiagem, vestindo uma camisa rosa claro e óculos.">
       <h3>Ana Silva</h3>
       <p>Ana é responsável por garantir que nossa marca seja conhecida por todo o mundo dos jogos. Com sua experiência
         em marketing digital, ela ajuda a desenvolver nossas campanhas publicitárias e promover nossos produtos em
@@ -68,7 +68,7 @@
       </p>
     </div>
     <div class="membro">
-      <img src="/images/felipe-rodrigues-retro-man.jpg" alt="Retro Man">
+      <img src="/images/felipe-rodrigues-retro-man.jpg" alt="Felipe Retro Man. Imagem de um homem branco com barba usando uma camiseta preta e fazendo um sinal de joia com as duas mãos.">
       <h3>Felipe Rodrigues</h3>
       <p>Felipe é o nosso especialista em jogos retros. Ele conhece todos os jogos clássicos e sabe como mantê-los
         funcionando perfeitamente. Ele também é responsável por encontrar novos jogos retros para adicionar à nossa
@@ -82,37 +82,54 @@
   <section id="produtos-servicos"> 
    
     <div class="card">
-      <img src="/images/jogo-retro-1-tabuleiro.jpg" alt="Produto 1">
+      <img src="/images/jogo-retro-1-tabuleiro.jpg" alt="Imagem em primeiro plano de um conjunto de cartas de baralho e peças de um jogo de tabuleiro, com destaque para os detalhes dos componentes. Ao fundo, é possível ver o tabuleiro do jogo, pronto para ser utilizado.">
       <h3>O Tesouro do Pirata</h3>
       <p>"O Tesouro do Pirata" é um emocionante jogo de tabuleiro onde os jogadores assumem o papel de piratas em busca de tesouros perdidos em uma ilha misteriosa. Com jogabilidade estratégica e desafios divertidos, este jogo oferece horas de entretenimento para toda a família. Encontre o tesouro antes que seus oponentes e torne-se o rei dos piratas neste jogo emocionante e cheio de aventuras.</p>
       <p class="preco">R$ 99,99</p>
       <button class="btn-comprar">Comprar</button>
     </div>
     <div class="card">
-      <img src="/images/game-boy-color.jpg" alt="Produto 2">
+      <img src="/images/game-boy-color.jpg" alt="Imagem de uma mão segurando um Game Boy Color verde em frente a um fundo de grama.">
       <h3>Game Boy Color</h3>
       <p>O Game Boy Color é um console portátil lançado pela Nintendo em 1998. Com sua tela colorida, o GBC proporcionou uma experiência de jogo mais imersiva do que seu antecessor, o Game Boy original. Ele apresentou uma grande biblioteca de jogos, incluindo clássicos como Super Mario Bros, The Legend of Zelda, Pokemon e Tetris.</p>
       <p class="preco">R$ 79,99</p>
-      <button class="btn-comprar">Comprar</button>
+      <button class="btn-comprar" onclick="abrirModal()">Comprar</button>
     </div>
     <div class="card">
-      <img src="/images/controle desmontado.jpg" alt="Produto 3">
+      <img src="/images/controle desmontado.jpg" alt="Controle de videogame desmontado, com suas partes separadas e prontas para serem personalizadas">
       <h3>Controle Personalizado</h3>
       <p>Transforme seu controle de videogame em uma peça única e personalizada com nosso serviço de personalização de controle. Oferecemos uma ampla variedade de designs e acabamentos para dar ao seu controle uma aparência única e especial. Desde estilos retrô e clássicos a designs modernos e personalizados, nosso serviço de personalização pode transformar seu controle em uma obra de arte.</p>
       <p class="preco">R$ 129,99</p>
-      <button class="btn-comprar">Comprar</button>
+      <button class="btn-comprar" onclick="abrirModal()">Comprar</button>
     </div>
     <div class="card">
-      <img src="/images/game-boy-pack.jpg" alt="Produto 4">
+      <img src="/images/game-boy-pack.jpg" alt="Conjunto de jogos famosos, incluindo Super Mario Bros, The Legend of Zelda e Pokémon, ao lado de um Game Boy preto de primeira geração.">
       <h3>Game Boy Pack</h3>
       <p>Com o Game Boy Pack de Jogos, você terá a oportunidade de reviver grandes momentos da história dos jogos eletrônicos, jogando alguns dos jogos mais icônicos da história da Nintendo em um console portátil, ideal para levar onde quiser. Não perca a chance de adquirir este pacote e se divertir com alguns dos jogos mais memoráveis da história!
       </p>
       <p class="preco">R$ 149,99</p>
-      <button class="btn-comprar">Comprar</button>
+      <button class="btn-comprar" onclick="abrirModal()">Comprar</button>
     </div>
   </section>
 
   <button id="voltarTopoBtn" onclick="voltarAoTopo()">Voltar ao Topo</button>
+
+
+
+<!-- Modal -->
+<div id="modal-compra" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Comprar Produto</h2>
+    <p class="preco-modal"></p>
+    <label for="quantidade">Quantidade:</label>
+    <input type="number" id="quantidade" value="1" min="1" max="10">
+    <button class="btn-add-carrinho">Adicionar ao Carrinho</button>
+    <button class="btn-limpar-carrinho">Limpar Carrinho</button>
+  </div>
+</div>
+
+
 
 
   <script src="./js/script.js"></script>

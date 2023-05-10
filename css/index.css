@@ -21,7 +21,23 @@ nav {
   align-items: center;
   padding: 20px;
   background-color: #f8f8f8;
+  border-bottom: 1px solid #ccc;
+  animation: border-animation 2s linear infinite;
+
 }
+
+@keyframes border-animation {
+  0% {
+    border-bottom: 1px solid #ccc;
+  }
+  50% {
+    border-bottom: 1px dotted #ccc;
+  }
+  100% {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
 
 .logo img {
   height: 80px;
@@ -44,12 +60,23 @@ li a {
   font-weight: bold;
   border-bottom: 2px solid transparent;
   transition: 0.3s ease-in;
+  font-size: 1.9rem;
 }
 
 nav a:hover {
   color: #ff9900;
   border-bottom: 1px solid #ff9900;
 }
+
+nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  
+}
+
 
 /* ANIMAÇÃO e BG  */
 
@@ -59,6 +86,7 @@ nav a:hover {
   padding: 100px;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('/images/retro-game-bg.jpg');
   height: 70vh;
+  margin-block: 200px;
   animation: moveBackground 88s linear infinite;
   text-shadow: #333;
 
@@ -337,6 +365,51 @@ h2::after {
 }
 
 
+/* SEÇÃO DO MODAL */
+
+
+
+
+/* Estilo do modal */
+.modal {
+display: none; /* Esconder o modal por padrão */
+position: fixed; /* Posição fixa para o modal */
+z-index: 1; /* Z-index para garantir que o modal apareça na frente de tudo */
+left: 0;
+top: 0;
+width: 100%; /* Largura total */
+height: 100%; /* Altura total */
+overflow: auto; /* Ativar rolagem */
+background-color: rgb(0,0,0); /* Fallback de cor preta */
+background-color: rgba(0,0,0,0.4); /* Cor de fundo transparente */
+}
+
+/* Estilo do conteúdo do modal */
+.modal-content {
+background-color: #fefefe;
+margin: 10% auto; /* Centralizar na tela */
+padding: 20px;
+border: 1px solid #888;
+width: 80%;
+}
+
+/* Estilo do botão de fechar */
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+
+
 /* REPONSIVE */
 
 @media screen and (max-width: 600px) {
@@ -367,6 +440,9 @@ h2::after {
   }  
 }
 
+#voltarTopoBtn {
+  display: none;
+}
 
 
 
@@ -400,3 +476,5 @@ h2::after {
     width: 100%;
   }
 }
+
+
