@@ -30,9 +30,11 @@ nav {
   0% {
     border-bottom: 1px solid #ccc;
   }
+
   50% {
     border-bottom: 1px dotted #ccc;
   }
+
   100% {
     border-bottom: 1px solid #ccc;
   }
@@ -74,7 +76,7 @@ nav.fixed {
   left: 0;
   width: 100%;
   z-index: 100;
-  
+
 }
 
 
@@ -106,6 +108,8 @@ nav.fixed {
 
 span {
   color: #F29D35;
+  font-weight: bold;
+  text-shadow: 4px;
 }
 
 @keyframes moveBackground {
@@ -195,16 +199,21 @@ h2::after {
 }
 
 
-.sobre-nos img {
+.sobre-nos figure {
   margin-right: 20px;
   max-width: 75%;
+}
+
+.logo img {
+  border: none;
+  box-shadow: none;
+}
+
+figure img {
   border-radius: 10%;
   border: 1px solid #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-
 }
-
 
 .sobre-nos p {
   text-align: space-around;
@@ -287,7 +296,7 @@ h2::after {
 
 .card {
   flex-direction: row;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 250PX;
   margin-bottom: 30px;
   padding: 20px;
@@ -302,7 +311,7 @@ h2::after {
   height: 200px;
   margin-bottom: 20px;
   object-fit: cover;
-  
+
 }
 
 .card h3 {
@@ -317,7 +326,7 @@ h2::after {
   font-size: 1.8rem;
   margin-bottom: 20px;
   padding: 5px;
-  
+
 }
 
 .card button {
@@ -334,7 +343,7 @@ h2::after {
 }
 
 .card button:hover {
-  background-color:#F2DA5E ;
+  background-color: #F2DA5E;
 }
 
 .card img:hover {
@@ -373,40 +382,49 @@ h2::after {
 
 /* Estilo do modal */
 .modal {
-display: none; /* Esconder o modal por padrão */
-position: fixed; /* Posição fixa para o modal */
-z-index: 1; /* Z-index para garantir que o modal apareça na frente de tudo */
-left: 0;
-top: 0;
-width: 100%; /* Largura total */
-height: 100%; /* Altura total */
-overflow: auto; /* Ativar rolagem */
-background-color: rgb(0,0,0); /* Fallback de cor preta */
-background-color: rgba(0,0,0,0.4); /* Cor de fundo transparente */
+  display: none;
+  /* Esconder o modal por padrão */
+  position: fixed;
+  /* Posição fixa para o modal */
+  z-index: 1;
+  /* Z-index para garantir que o modal apareça na frente de tudo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Largura total */
+  height: 100%;
+  /* Altura total */
+  overflow: auto;
+  /* Ativar rolagem */
+  background-color: rgb(0, 0, 0);
+  /* Fallback de cor preta */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Cor de fundo transparente */
 }
 
 /* Estilo do conteúdo do modal */
 .modal-content {
-background-color: #fefefe;
-margin: 10% auto; /* Centralizar na tela */
-padding: 20px;
-border: 1px solid #888;
-width: 80%;
+  background-color: #fefefe;
+  margin: 10% auto;
+  /* Centralizar na tela */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
 /* Estilo do botão de fechar */
 .close {
-color: #aaa;
-float: right;
-font-size: 28px;
-font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-color: black;
-text-decoration: none;
-cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 
@@ -422,26 +440,22 @@ cursor: pointer;
   .titulo h1 {
     font-size: 3.4rem;
     margin-top: 40px;
-    
+
   }
-  
+
   .titulo p {
     font-size: 1.9rem;
     margin-top: 10px;
   }
 
-    /* Desabilitar a fixação do nav na tela */
-    nav.fixed {
-      position: relative;
-    }
-
-    
+  /* Desabilitar a fixação do nav na tela */
+  nav.fixed {
+    position: relative;
   }
-  
 
 
+}
 
-  
 
 @media screen and (max-width: 600px) {
 
@@ -469,7 +483,7 @@ cursor: pointer;
   .titulo h1,
   h2 {
     font-size: 2.8rem;
-  }  
+  }
 }
 
 
@@ -504,13 +518,3 @@ cursor: pointer;
     width: 100%;
   }
 }
-
-
-
-
-
- 
-  
-
-
-

@@ -1,5 +1,5 @@
 
-window.onscroll = function() {
+window.onscroll = function () {
   scrollFunction();
 };
 
@@ -35,20 +35,20 @@ var btnComprar = document.querySelector('.btn-comprar');
 var span = document.querySelector('.close');
 
 // Quando o usuário clicar no botão Comprar, abrir o modal
-btnComprar.onclick = function() {
-modal.style.display = "block";
+btnComprar.onclick = function () {
+  modal.style.display = "block";
 }
 
 // Quando o usuário clicar no botão Fechar, fechar o modal
-span.onclick = function() {
-modal.style.display = "none";
+span.onclick = function () {
+  modal.style.display = "none";
 }
 
 // Quando o usuário clicar em qualquer lugar fora do modal, fechar o modal
-window.onclick = function(event) {
-if (event.target == modal) {
-modal.style.display = "none";
-}
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 
 const inputQuantidade = document.querySelector('#quantidade');
