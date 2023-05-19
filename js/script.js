@@ -1,8 +1,15 @@
-window.onscroll = function() {scrollFunction()};
+
+window.onscroll = function() {
+  scrollFunction();
+};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("voltarTopoBtn").style.display = "block";
+  if (window.innerWidth >= 768) {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("voltarTopoBtn").style.display = "block";
+    } else {
+      document.getElementById("voltarTopoBtn").style.display = "none";
+    }
   } else {
     document.getElementById("voltarTopoBtn").style.display = "none";
   }
@@ -12,6 +19,9 @@ function voltarAoTopo() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Neste código, utilizamos a propriedade window.innerWidth para verificar a largura da tela. Se a largura for maior ou igual a 768 pixels, a função scrollFunction() é executada normalmente, verificando o scroll e exibindo ou ocultando o botão "Voltar ao Topo" de acordo. Caso a largura seja menor que 768 pixels, o botão é sempre ocultado, independentemente do scroll.
+
 
 
 

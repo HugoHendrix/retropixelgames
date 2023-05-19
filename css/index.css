@@ -83,18 +83,18 @@ nav.fixed {
 
 .titulo {
   text-align: center;
-  padding: 100px;
+  padding: 18rem;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('/images/retro-game-bg.jpg');
-  height: 70vh;
-  margin-block: 200px;
   animation: moveBackground 88s linear infinite;
   text-shadow: #333;
+  height: 100vh;
 
 }
 
 .titulo h1 {
   font-size: 5rem;
   color: #f8f8f8;
+  margin-top: 80px;
 }
 
 .titulo p {
@@ -208,7 +208,7 @@ h2::after {
 
 .sobre-nos p {
   text-align: space-around;
-  text-indent: 25px;
+  text-indent: 10px;
   font-size: 2.2rem;
   padding: 3rem;
 }
@@ -314,8 +314,9 @@ h2::after {
 
 .card p {
   color: black;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
+  padding: 5px;
   
 }
 
@@ -412,12 +413,43 @@ cursor: pointer;
 
 /* REPONSIVE */
 
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .titulo {
+    padding: 10rem 4rem;
+  }
+
+  .titulo h1 {
+    font-size: 3.4rem;
+    margin-top: 40px;
+    
+  }
+  
+  .titulo p {
+    font-size: 1.9rem;
+    margin-top: 10px;
+  }
+
+    /* Desabilitar a fixação do nav na tela */
+    nav.fixed {
+      position: relative;
+    }
+
+    
+  }
+  
+
+
+
+  
+
 @media screen and (max-width: 600px) {
 
   nav {
     flex-direction: column;
     align-items: stretch;
   }
+
 
   .logo {
     text-align: center;
@@ -440,13 +472,9 @@ cursor: pointer;
   }  
 }
 
-#voltarTopoBtn {
-  display: none;
-}
 
 
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .sobre-nos {
     display: flex;
     flex-direction: column;
@@ -460,9 +488,9 @@ cursor: pointer;
   }
 
   .sobre-nos p {
-    text-align: space-around;
-    font-size: 2rem;
-    padding: 3rem;
+    text-align: center;
+    font-size: 2.2rem;
+    padding: 1.8rem;
   }
 }
 
@@ -476,5 +504,13 @@ cursor: pointer;
     width: 100%;
   }
 }
+
+
+
+
+
+ 
+  
+
 
 
